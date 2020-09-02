@@ -1,3 +1,1 @@
-# srs-ieee-latex
-A Software Requirements Specification document template in LaTeX respecting the latest IEEE standards.  
-This document is created in conformance with the international standards stated in ISO/IEC/IEEE 29148. 
+A Software Requirements Specification document template written in LaTeX. It is created in conformance with the international standards stated in [ISO/IEC/IEEE 29148](https://standards.ieee.org/standard/29148-2011.html) .  
