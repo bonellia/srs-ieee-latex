@@ -1,0 +1,71 @@
+% In accordance with "Systems and software engineering — Life cycle processes — Requirements engineering"
+% (ISO/IEC/IEEE29148-2018) - https://standards.ieee.org/standard/29148-2018.html
+
+\documentclass{scrreprt}
+\usepackage{listings}
+\usepackage{underscore}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\hypersetup{
+    pdftitle={Software Requirement Specification},
+    pdfauthor={$<$Author$>$}, % author
+    pdfsubject={TeX and LaTeX}, % subject of the document
+    pdfkeywords={TeX, LaTeX, graphics, images, srs, software}, % list of keywords
+    colorlinks=true, % false: boxed links; true: colored links
+    linkcolor=blue, % color of internal links
+    citecolor=black, % color of links to bibliography
+    filecolor=black, % color of file links
+    urlcolor=purple, % color of external links
+    linktoc=page % only page is linked
+}
+
+\def\myversion{1.0 }
+\date{}
+\title{}
+\usepackage{hyperref}
+\begin{document}
+
+\begin{flushright}
+    \rule{14cm}{5pt}
+    \vskip1cm
+    {\bfseries
+        \Huge{Software Requirements\\ Specification}\\
+        \vspace{1.6cm}
+        for\\
+        \vspace{1.6cm}
+        $<$Project Name$>$\\
+        \vspace{1.6cm}
+        \LARGE{Version \myversion approved}\\
+        \vspace{1.6cm}
+        Prepared by $<$Author$>$\\
+        \vspace{1.6cm}
+        $<$Company$>$\\
+        \vspace{1.6cm}
+        \today\\
+    }
+\end{flushright}
+
+\tableofcontents
+
+\chapter*{Revision History}
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+	    Name & Date & Reason For Changes & Version\\
+        \hline
+	    $<$Rev Name 1$>$ & $<$Date 1$>$ & $<$Reason 1$>$ & $<$Ver 1$>$\\
+        \hline
+	    $<$Rev Name 2$>$ & $<$Date 2$>$ & $<$Reason 2$>$ & $<$Ver 2$>$\\
+        \hline
+    \end{tabular}
+\end{center}
+
+\input{introduction.tex}
+\input{references.tex}
+\input{requirements.tex}
+\input{verification.tex}
+\input{appendices.tex}
+
+\end{document}
