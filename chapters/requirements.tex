@@ -12,71 +12,72 @@
 % c)   Be uniquely identifiable.
 
 
+
 \section{Functions}
-% Define all inputs into and outputs from the software system. The description should complement the interface
-% descriptions in 2.3.1 through 2.3.5, and should not repeat information there.
-% Each interface defined should include the following content:
-% a)   Name of item;
-% b)   Description of purpose;
-% c)   Source of input or destination of output;
-% d)   Valid range, accuracy, and/or tolerance;
-% e)   Units of measure;
-% f)   Timing;   
-% g)   Relationships to other inputs/outputs;
-% h)   Screen formats/organization; 
-% i)   Window formats/organization;
-% j)   Data formats;
-% k)   Command formats;
-% l)   Endmessages.
+% Define the fundamental actions that have to take place in the software in accepting and processing the inputs and in processing and generating the outputs, including:
+% a)    validity checks on the inputs;
+% b)    exact sequence of operations;
+% c)    responses to abnormal situations, including:
+%       1)    overflow;
+%       2)    communication facilities;
+%       3)    hardware faults and failures; and
+%       4)    error handling and recovery;
+% d)    effect of parameters;
+% e)    relationship of outputs to inputs, including:
+%       1)    input/output sequences; and
+%       2)    formulas for input to output conversion.
+% It may be appropriate to partition the functional requirements into sub-functions or sub-processes. 
+% This does not imply that the software design will also be partitioned that way.
+
 
 
 \section{Performance Requirements}
-% Define the fundamental actions that have to take place in the software in accepting and processing the inputs
-% and in processing and generating the outputs, including
-% a)   Validity checks on the inputs
-% b)   Exact sequence of operations
-% c)   Responses to abnormal situations, including
-%      1)   Overflow         
-%      2)   Communication facilities         
-%      3)   Error handling and recovery 
-% d)   Effect of parameters 
-% e)   Relationship of outputs to inputs, including 
-%      1)   Input/output sequences         
-%      2)   Formulas for input to output conversion
-% It may be appropriate to partition the functional requirements into subfunctions or subprocesses. This does
-% not imply that the software design will also be partitioned that way.
+% Specify both the static and the dynamic numerical requirements placed on the software or on human interaction with the software as a whole.
+% Static numerical requirements may include the following:
+% a)    the number of terminals to be supported;
+% b)    the number of simultaneous users to be supported; and
+% c)    the amount and type of information to be handled.
+% Static numerical requirements are sometimes identified under a separate section entitled Capacity.
+% Dynamic numerical requirements may include, for example, the numbers of transactions and tasks and the amount of data to be processed within certain time periods for both normal and peak workload conditions.
+% The performance requirements should be stated in measurable terms.
+% For example,95 \% of the transactions shall be processed in less than 1 s.rather than,
+% An operator shall not have to wait for the transaction to complete.
+% NOTE Numerical limits applied to one specific function are normally specified as part of the processing subparagraph description of that function.
+
 
 
 \section{Usability Requirements}
-% Define usability (quality in use) requirements. Usability requirements and objectives for the software system
-% include measurable effectiveness, efficiency, and satisfaction criteria in specific contexts of use.
+% Define usability and quality in use requirements and objectives for the software system that can include measurable effectiveness, efficiency, satisfaction criteria and avoidance of harm that could arise from use in specific contexts of use.
+% NOTE Additional guidance on usability requirements can be found in ISO/IEC TR 25060.
+
 
 
 \section{Interface Requirements}
-% Specify both the static and the dynamic numerical requirements placed on the software or on human
-% interaction with the software as a whole.
-% Static numerical requirements may include the following:
-% a)  The number of terminals to be supported;
-% b)  The number of simultaneous users to be supported;
-% c)  Amount and type of information to be handled.
-% Static numerical requirements are sometimes identified under a separate section entitled Capacity.
-% Dynamic numerical requirements may include, for example, the numbers of transactions and tasks and the
-% amount of data to be processed within certain time periods for both normal and peak workload conditions.
-% The performance requirements should be stated in measurable terms.
-% For example,
-%       95 % of the transactions shall be processed in less than 1 second.
-% rather than,
-%       An operator shall not have to wait for the transaction to complete.
-% NOTE: Numerical limits applied to one specific function are normally specified as part of the processing subparagraph
-% description of that function.
+% Define all inputs into and outputs from the software system. The description should complement the interface descriptions in 9.6.4.1 through 9.6.4.5, and should not repeat information there.
+% Each interface defined should include the following content:
+% a)    name of item;
+% b)    description of purpose;
+% c)    source of input or destination of output;
+% d)    valid range, accuracy and/or tolerance;
+% e)    units of measure;
+% f)    timing;
+% g)    relationships to other inputs/outputs;
+% h)    data formats;
+% i)    command formats; and
+% j)    data items or information included in the input and output.
+
+
+
 \section{Logical Database Requirements}
 % Specify the logical requirements for any information that is to be placed into a database, including:
-% a)   Types of information used by various functions;
-% b)   Frequency of use;
-% c)   Accessing   capabilities;
-% d)   Data entities and their relationships;
-% e)   Integrity   constraints;
-% f)   Data retention requirements.
+% a)    types of information used by various functions;
+% b)    frequency of use;
+% c)    accessing capabilities;
+% d)    data entities and their relationships;
+% e)    integrity constraints;
+% f)    security; and
+% g)    data retention requirements
+
 
 
 \section{Design Constraints}
@@ -84,38 +85,40 @@
 % limitations.
 
 
+
 \section{Software System Attributes}
 % Specify the required attributes of the software product. The following is a partial list of examples:
-% a)  Reliability - Specify the factors required to establish the required reliability of the software system at time
-%     of delivery.
-% b)  Availability - Specify the factors required to guarantee a defined availability level for the entire system
-%     such as checkpoint, recovery, and restart.
-% c)  Security - Specify the requirements to protect the software from accidental or malicious access, use
-%     modification, destruction, or disclosure. Specific requirements in this area could include the need to:
-%     1)   Utilize certain cryptographic techniques;
-%     2)   Keep specific log or history data sets;
-%     3)   Assign certain functions to different modules;
-%     4)   Restrict communications between some areas of the program;
-%     5)   Check data integrity for critical variables;
-%     6)   Assure data privacy.
-% d) Maintainability - Specify attributes of software that relate to the ease of maintenance of the software itself.
-%    These may include requirements for certain modularity, interfaces, or complexity limitation. Requirements
-%    should not be placed here just because they are thought to be good design practices.
-% e)  Portability - Specify attributes of software that relate to the ease of porting the software to other host
-%     machines and/or operating systems, including:
-%     1) Percentage of elements with host-dependent code;
-%     2) Percentage of code that is host dependent;
-%     3) Use of a proven portable language;
-%     4) Use of a particular compiler or language subset;
-%     5) Use of a particular operating system.
+% a)  Reliability - Specify the factors required to establish the required reliability of the software system 
+%     at time of delivery.
+% b)  Availability - Specify the factors required to guarantee a defined availability level for the entire 
+%     system such as checkpoint, recovery, and restart.
+% c)  Security - Specify the requirements to protect the software from accidental or malicious access, 
+%     use modification, destruction, or disclosure. Specific requirements in this area could include the 
+%     need to:
+%     1)    Utilize certain cryptographic techniques;
+%     2)    Keep specific log or history data sets;
+%     3)    Assign certain functions to different modules;
+%     4)    Restrict communications between some areas of the program;
+%     5)    Check data integrity for critical variables;
+%     6)    Assure data privacy.
+% d)  Maintainability - Specify attributes of software that relate to the ease of maintenance of the 
+%     software itself. These may include requirements for certain modularity, interfaces, or complexity 
+%     limitation. Requirements should not be placed here just because they are thought to be good design 
+%     practices.
+% e)  Portability - Specify attributes of software that relate to the ease of porting the software to other 
+%     host machines and/or operating systems, including:
+%     1)    Percentage of elements with host-dependent code;
+%     2)    Percentage of code that is host dependent;
+%     3)    Use of a proven portable language;
+%     4)    Use of a particular compiler or language subset;
+%     5)    Use of a particular operating system.
+
 
 
 \section{Supporting Information}
-% The SRS should contain additional supporting information including
-% a)   Sample input/output formats, descriptions of cost analysis studies, or results of user surveys;
-% b)   Supporting or background information that can help the readers of the SRS;
-% c)   A description of the problems to be solved by the software;
-% d)   Special packaging instructions for the code and the media to meet security, export, initial loading, or other
-%      requirements.
-% The SRS should explicitly state whether or not these information items are to be considered part of the 
-% requirements.
+% Additional supporting information to be considered includes:
+% a)    sample input/output formats, descriptions of cost analysis studies or results of user surveys;
+% b)    supporting or background information that can help the readers of the SRS;
+% c)    a description of the problems to be solved by the software; and
+% d)    special packaging instructions for the code and the media to meet security, export, initial loading or other requirements.
+% The SRS should explicitly state whether or not these information items are to be considered part of the requirements.
