@@ -1,15 +1,13 @@
 \chapter{Requirements}
-% Specify all of the software requirements to a level of detail sufficient to enable designers to design a software
-% system to satisfy those requirements.
-% Specify all of the software requirements to a level of detail sufficient to enable testers to test that the software
-% system satisfies those requirements.
-% At a minimum, describe every input (stimulus) into the software system, every output (response) from the software
-% system, and all functions performed by the software system in response to an input or in support of an output.
-% The specific requirements should:
-% a)   Be stated in conformance with all the characteristics described in subclause 5.2 of this International
-%      Standard.
-% b)   Be cross-referenced to earlier documents that relate.
-% c)   Be uniquely identifiable.
+% Specify the software system requirements to a level of detail sufficient for software design, development
+% and verification of the software increment or release in process.
+% The requirements should:
+% a) be stated in conformance with all the characteristics described in 5.2 of this document;
+% b) be cross-referenced to earlier versions or related documents;
+% c) be uniquely identifiable;
+% d) describe every input (stimulus) into the software system, every output (response) from the
+% software system, and all functions performed by the software system in response to an input or in
+% support of an output.
 
 
 
@@ -31,44 +29,50 @@
 
 
 
-\section{Performance Requirements}
-% Specify both the static and the dynamic numerical requirements placed on the software or on human interaction with the software as a whole.
+\section{Performance requirements}
+% Specify both the static and the dynamic numerical requirements placed on the software or on human
+% interaction with the software as a whole.
 % Static numerical requirements may include the following:
-% a)    the number of terminals to be supported;
-% b)    the number of simultaneous users to be supported; and
-% c)    the amount and type of information to be handled.
+% a) the number of terminals to be supported;
+% b) the number of simultaneous users to be supported; and
+% c) the amount and type of information to be handled.
 % Static numerical requirements are sometimes identified under a separate section entitled Capacity.
-% Dynamic numerical requirements may include, for example, the numbers of transactions and tasks and the amount of data to be processed within certain time periods for both normal and peak workload conditions.
+% Dynamic numerical requirements may include, for example, the numbers of transactions and tasks and
+% the amount of data to be processed within certain time periods for both normal and peak workload
+% conditions.
 % The performance requirements should be stated in measurable terms.
-% For example,95 \% of the transactions shall be processed in less than 1 s.rather than,
+% For example,
+% 95 % of the transactions shall be processed in less than 1 s.
+% rather than,
 % An operator shall not have to wait for the transaction to complete.
-% NOTE Numerical limits applied to one specific function are normally specified as part of the processing subparagraph description of that function.
+% NOTE Numerical limits applied to one specific function are normally specified as part of the processing
+% subparagraph description of that function.
 
-
-
-\section{Usability Requirements}
-% Define usability and quality in use requirements and objectives for the software system that can include measurable effectiveness, efficiency, satisfaction criteria and avoidance of harm that could arise from use in specific contexts of use.
+\section{Usability requirements}
+% Define usability and quality in use requirements and objectives for the software system that can include
+% measurable effectiveness, efficiency, satisfaction criteria and avoidance of harm that could arise from
+% use in specific contexts of use.
 % NOTE Additional guidance on usability requirements can be found in ISO/IEC TR 25060.
 
 
-
-\section{Interface Requirements}
-% Define all inputs into and outputs from the software system. The description should complement the interface descriptions in 9.6.4.1 through 9.6.4.5, and should not repeat information there.
+\section{Interface requirements}
+% Define all inputs into and outputs from the software system. The description should complement the
+% interface descriptions in 9.6.4.1 through 9.6.4.5, and should not repeat information there.
 % Each interface defined should include the following content:
-% a)    name of item;
-% b)    description of purpose;
-% c)    source of input or destination of output;
-% d)    valid range, accuracy and/or tolerance;
-% e)    units of measure;
-% f)    timing;
-% g)    relationships to other inputs/outputs;
-% h)    data formats;
-% i)    command formats; and
-% j)    data items or information included in the input and output.
+% a) name of item;
+% b) description of purpose;
+% c) source of input or destination of output;
+% d) valid range, accuracy and/or tolerance;
+% e) units of measure;
+% f) timing;
+% g) relationships to other inputs/outputs;
+% h) data formats;
+% i) command formats; and
+% j) data items or information included in the input and output.
 
 
 
-\section{Logical Database Requirements}
+\section{Logical database requirements}
 % Specify the logical requirements for any information that is to be placed into a database, including:
 % a)    types of information used by various functions;
 % b)    frequency of use;
@@ -80,11 +84,20 @@
 
 
 
-\section{Design Constraints}
+\section{Design constraints}
 % Specify constraints on the system design imposed by external standards, regulatory requirements, or project
 % limitations.
 
-
+\section{Standards compliance}
+% Specify the requirements derived from existing standards or regulations, including:
+% a) report format;
+% b) data naming;
+% c) accounting procedures; and
+% d) audit tracing.
+% For example, this could specify the requirement for software to trace processing activity. Such traces
+% are needed for some applications to meet minimum regulatory or financial standards. An audit trace
+% requirement may, for example, state that all changes to a payroll database shall be recorded in a trace
+% file with before and after values.
 
 \section{Software System Attributes}
 % Specify the required attributes of the software product. The following is a partial list of examples:
@@ -117,8 +130,10 @@
 
 \section{Supporting Information}
 % Additional supporting information to be considered includes:
-% a)    sample input/output formats, descriptions of cost analysis studies or results of user surveys;
-% b)    supporting or background information that can help the readers of the SRS;
-% c)    a description of the problems to be solved by the software; and
-% d)    special packaging instructions for the code and the media to meet security, export, initial loading or other requirements.
-% The SRS should explicitly state whether or not these information items are to be considered part of the requirements.
+% a) sample input/output formats, descriptions of cost analysis studies or results of user surveys;
+% b) supporting or background information that can help the readers of the SRS;
+% c) a description of the problems to be solved by the software; and
+% d) special packaging instructions for the code and the media to meet security, export, initial loading
+% or other requirements.
+% The SRS should explicitly state whether or not these information items are to be considered part of the
+% requirements.
